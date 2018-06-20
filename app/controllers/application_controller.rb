@@ -26,7 +26,10 @@ class ApplicationController < Sinatra::Base
 	end
 
 	get "/login" do
-	  User.find_by(username: params["username"])
+	 user = User.find_by(username: params["username"])
+	 if user 
+	   
+	 end
 		erb :login
 	end
 
